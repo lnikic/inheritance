@@ -13,7 +13,7 @@ public class Main {
             animal.eat();
             animal.roam();
         }
-
+        System.out.println("---------------------------------------");
         Dog dog = new Dog();
         Dog dog2 = new Dog();
         MyDogList myDogList = new MyDogList();
@@ -21,5 +21,21 @@ public class Main {
         myDogList.add(dog2);
         System.out.println(myDogList.getLength());
 
+        MyAnimalList myAnimalList = new MyAnimalList();
+        Cat cat = new Cat();
+        myAnimalList.add(cat);
+        myAnimalList.add(dog);
+        System.out.println("---------------------------------------");
+        if(dog.equals(cat)) {
+            System.out.println("true");
+        }else {                         // tells if two objecta are considered equal
+            System.out.println("false");
+        }
+        System.out.println("---------------------------------------");
+        System.out.println(cat.getClass()); //give back d cllas d obj was instantiated from
+        System.out.println("---------------------------------------");
+        System.out.println(cat.hashCode()); // prints out a hashcode for the obj
+        System.out.println("---------------------------------------");
+        System.out.println(cat.toString()); // ptints out a String message with the name and number
     }
 }
